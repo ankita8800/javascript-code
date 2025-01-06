@@ -49,3 +49,23 @@ document.getElementById("mysubmit").onclick = function(){
     circumstance= 2 * PI * radius;
     document.getElementById("showval").textContent = circumstance; 
 }
+
+// <!-- counter program -->
+
+const increasebtn= document.getElementById("incbtn");
+const reset=document.getElementById("reset");
+const decreasebtn= document.getElementById("decbtn");
+const countlabel=document.getElementById("countval")
+let count=0;
+increasebtn.onclick=function(){
+    count++;
+    countlabel.textContent= count;
+}
+decreasebtn.onclick=function(){
+    count--;
+    countlabel.textContent= count;
+}
+reset.onclick=function(){
+    count=0;
+    countlabel.textContent= count;
+}
