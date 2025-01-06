@@ -31,3 +31,10 @@ document.getElementById("addnumber"). textContent="The value is z is " + z;
 let result= 2 + 2 / 2 - 2 * 2;
 console.log(result);
 
+// <!-- submit form -->
+
+let username;
+document.getElementById("submit").onclick = function(){
+  username=document.getElementById("mytext").value;
+  console.log(username); 
+}
