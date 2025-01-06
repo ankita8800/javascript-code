@@ -38,3 +38,14 @@ document.getElementById("submit").onclick = function(){
   username=document.getElementById("mytext").value;
   console.log(username); 
 }
+
+// <!-- Calculate the circumstance -->
+
+const PI = 3.453465;
+let radius;
+let circumstance;
+document.getElementById("mysubmit").onclick = function(){
+    radius = document.getElementById("radval").value;
+    circumstance= 2 * PI * radius;
+    document.getElementById("showval").textContent = circumstance; 
+}
