@@ -69,3 +69,15 @@ reset.onclick=function(){
     count=0;
     countlabel.textContent= count;
 }
+
+// <!-- random number generator -->
+
+let min=1;
+let max=6;
+const valuenum= document.getElementById("valuenum");
+const valueadd= document.getElementById("valueadd");
+let randomnum;
+valuenum.onclick= function(){
+   randomnum = Math.floor(Math.random() * max ) + min;
+   valueadd.textContent = randomnum;
+}
