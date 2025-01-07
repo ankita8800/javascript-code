@@ -81,3 +81,26 @@ valuenum.onclick= function(){
    randomnum = Math.floor(Math.random() * max ) + min;
    valueadd.textContent = randomnum;
 }
+
+
+// <!-- if else condition -->
+const ageval = document.getElementById("ageval");
+const mysubmitval = document.getElementById("mysubmitval");
+const valuetxt =  document.getElementById("valuetxt");
+let age;
+mysubmitval.onclick= function() {
+    age= ageval.value;
+    age= Number(age);
+    if(age <= 17){
+        valuetxt.textContent =`you are not visit this site`;
+    }
+   
+    else if(age == 0){
+        valuetxt.textContent =`you must be 18+ to visit this site`;
+    }
+    
+    else{
+        valuetxt.textContent =`welcome to site`;
+    }
+   
+}
