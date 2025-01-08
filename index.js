@@ -104,3 +104,36 @@ mysubmitval.onclick= function() {
     }
    
 }
+
+// <!-- checked property -->
+
+const checkbox= document.getElementById("checkbox");
+const visacard= document. getElementById("visacard");
+const mastercard= document. getElementById("mastercard");
+const debitcard= document. getElementById("debitcard");
+const submittext= document. getElementById("submittext");
+const subresult= document. getElementById("subresult");
+const paymentresult= document. getElementById("paymentresult");
+
+submittext.onclick=function(){
+
+    if(checkbox.checked){
+        subresult.textContent= `you are subscribe`;
+    }
+    else{
+        subresult.textContent= `you are not subscribe`;
+    }
+
+    if(visacard.checked){
+        paymentresult.textContent= `you are paying Visa Card`;
+    }
+    else if(mastercard.checked){
+        paymentresult.textContent= `you are paying Master Card`;
+    }
+    else if(debitcard.checked){
+        paymentresult.textContent= `you are paying Debit Card`; 
+    }
+    else{
+        paymentresult.textContent= `you must select payment type`; 
+    }
+}
