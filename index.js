@@ -137,3 +137,9 @@ submittext.onclick=function(){
         paymentresult.textContent= `you must select payment type`; 
     }
 }
+
+// <!-- ternary operator -->
+let ages= 10;
+const resultage= document.getElementById("resultage");
+let resultages= ages >=18 ? `you are adult` : `you are minor`;
+resultage.textContent= resultages;
