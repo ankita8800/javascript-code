@@ -143,3 +143,34 @@ let ages= 10;
 const resultage= document.getElementById("resultage");
 let resultages= ages >=18 ? `you are adult` : `you are minor`;
 resultage.textContent= resultages;
+
+
+// <!-- switch cases -->
+
+const day = document.getElementById("days");
+let weekday =4;
+switch(weekday){
+    case 1:
+         day.textContent=`Today is Monday`;
+         break;
+    case 2:
+            day.textContent=`Today is Tuesday`;
+            break;
+    case 3:
+            day.textContent=`Today is Wednesday`;
+            break;
+    case 4:
+            day.textContent=`Today is Thursday`;
+            break;
+    case 5:
+            day.textContent=`Today is Friday`;
+            break;
+    case 6:
+            day.textContent=`Today is Saturday`;
+            break;
+    case 7:
+            day.textContent=`Today is Sunday`;
+            break;
+    default: 
+            day.textContent=`Not a Day`;      
+}
