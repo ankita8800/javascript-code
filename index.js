@@ -176,7 +176,9 @@ switch(weekday){
 }
 
 // <!-- string slicing -->
- const email= "ankita@gmail.com";
+ const email= "ankita123@gmail.com";
  const mytxt= document.getElementById("mytxt");
  let usersname= email.slice(0, email.indexOf("@"));
+ let extenstion= email.slice(email.indexOf("@") +1);
  mytxt.textContent=usersname;
+ extention.textContent=extenstion;
