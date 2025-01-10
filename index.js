@@ -174,3 +174,9 @@ switch(weekday){
     default: 
             day.textContent=`Not a Day`;      
 }
+
+// <!-- string slicing -->
+ const email= "ankita@gmail.com";
+ const mytxt= document.getElementById("mytxt");
+ let usersname= email.slice(0, email.indexOf("@"));
+ mytxt.textContent=usersname;
