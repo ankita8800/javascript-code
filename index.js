@@ -182,3 +182,15 @@ switch(weekday){
  let extenstion= email.slice(email.indexOf("@") +1);
  mytxt.textContent=usersname;
  extention.textContent=extenstion;
+
+
+//  airthmetic 
+ let sum = 5 + 3;
+let difference = 10 - 4;
+let product = 6 * 7;
+let quotient = 20 / 5;
+
+console.log('Sum:', sum);           // Outputs: Sum: 8
+console.log('Difference:', difference); // Outputs: Difference: 6
+console.log('Product:', product);   // Outputs: Product: 42
+console.log('Quotient:', quotient); // Outputs: Quotient: 4
