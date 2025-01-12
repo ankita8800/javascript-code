@@ -194,3 +194,11 @@ console.log('Sum:', sum);           // Outputs: Sum: 8
 console.log('Difference:', difference); // Outputs: Difference: 6
 console.log('Product:', product);   // Outputs: Product: 42
 console.log('Quotient:', quotient); // Outputs: Quotient: 4
+
+
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+fruits.forEach(function(fruit) {
+  console.log(fruit);
+});
