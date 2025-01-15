@@ -202,3 +202,33 @@ const fruits = ['apple', 'banana', 'cherry'];
 fruits.forEach(function(fruit) {
   console.log(fruit);
 });
+
+
+ // Function to perform basic arithmetic operations
+ function performArithmetic(a, b, operation) {
+    switch (operation) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'multiply':
+            return a * b;
+        case 'divide':
+            if (b !== 0) {
+                return a / b;
+            } else {
+                return "Error: Division by zero is not allowed";
+            }
+        default:
+            return "Invalid operation. Please use 'add', 'subtract', 'multiply', or 'divide'.";
+    }
+}
+
+// Example usage:
+let num1 = 10;
+let num2 = 5;
+
+console.log("Addition: " + performArithmetic(num1, num2, 'add'));        // 10 + 5 = 15
+console.log("Subtraction: " + performArithmetic(num1, num2, 'subtract'));  // 10 - 5 = 5
+console.log("Multiplication: " + performArithmetic(num1, num2, 'multiply')); // 10 * 5 = 50
+console.log("Division: " + performArithmetic(num1, num2, 'divide'));      // 10 / 5 = 2
