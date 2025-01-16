@@ -232,3 +232,9 @@ console.log("Addition: " + performArithmetic(num1, num2, 'add'));        // 10 +
 console.log("Subtraction: " + performArithmetic(num1, num2, 'subtract'));  // 10 - 5 = 5
 console.log("Multiplication: " + performArithmetic(num1, num2, 'multiply')); // 10 * 5 = 50
 console.log("Division: " + performArithmetic(num1, num2, 'divide'));      // 10 / 5 = 2
+
+
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName;  // Using + operator
+let fullNameTemplate = `${firstName} ${lastName}`;  // Using template literals
