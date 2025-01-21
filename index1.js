@@ -43,6 +43,22 @@ while (i < 5) {
   console.log("Iteration number: " + i);
   i++;
 }
+// logic operator
+
+let a = true;
+let b = false;
+
+console.log(a && b);  // false because both are not true
+console.log(true && true);  // true
+console.log(false && true);  // false
+
+
+let c = true;
+let d = false;
+
+console.log(c || d);  // true because at least one is true
+console.log(false || false);  // false
+console.log(true || false);   // true
 
   
 
