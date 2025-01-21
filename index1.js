@@ -60,5 +60,10 @@ console.log(c || d);  // true because at least one is true
 console.log(false || false);  // false
 console.log(true || false);   // true
 
-  
+let e = true;
+let f = false;
+
+console.log(!e);  // false because 'a' is true, and NOT makes it false
+console.log(!f);  // true because 'b' is false, and NOT makes it true
+
 
