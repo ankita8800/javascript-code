@@ -22,6 +22,30 @@
  <button id="submittext">Submit</button>
  <p id="subresult"></p>
  <p id="paymentresult"></p>
+
+
+ <!-- temperature converter -->
+ <div class="container">
+    <h1>Temperature Converter</h1>
+  
+    <div class="input-group">
+      <label for="tempValue">Enter Temperature:</label>
+      <input type="number" id="tempValue" placeholder="Enter value">
+    </div>
+  
+    <div class="input-group">
+      <label for="tempUnit">Select Unit:</label>
+      <select id="tempUnit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+      </select>
+    </div>
+  
+    <button onclick="convertTemperature()">Convert</button>
+  
+    <div class="result" id="result"></div>
+  </div>
 <script src="index1.js"></script>
 </body>
 </html>

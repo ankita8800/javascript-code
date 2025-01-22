@@ -66,4 +66,41 @@ let f = false;
 console.log(!e);  // false because 'a' is true, and NOT makes it false
 console.log(!f);  // true because 'b' is false, and NOT makes it true
 
+// <!-- temperature converter -->
 
+function convertTemperature() {
+    const tempValue = parseFloat(document.getElementById('tempValue').value);
+    const tempUnit = document.getElementById('tempUnit').value;
+    let resultText = '';
+
+    if (isNaN(tempValue)) {
+      alert("Please enter a valid temperature value.");
+      return;
+    }
+
+    switch (tempUnit) {
+      case 'C':
+        resultText = `
+          <strong>${tempValue}°C</strong> is equal to:<br>
+          ${(tempValue * 9/5) + 32}°F (Fahrenheit)<br>
+          ${tempValue + 273.15}K (Kelvin)
+        `;
+        break;
+      case 'F':
+        resultText = `
+          <strong>${tempValue}°F</strong> is equal to:<br>
+          ${(tempValue - 32) * 5/9}°C (Celsius)<br>
+          ${((tempValue - 32) * 5/9) + 273.15}K (Kelvin)
+        `;
+        break;
+      case 'K':
+        resultText = `
+          <strong>${tempValue}K</strong> is equal to:<br>
+          ${tempValue - 273.15}°C (Celsius)<br>
+          ${(tempValue - 273.15) * 9/5 + 32}°F (Fahrenheit)
+        `;
+        break;
+    }
+
+    document.getElementById('result').innerHTML = resultText;
+  }
