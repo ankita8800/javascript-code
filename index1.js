@@ -104,3 +104,12 @@ function convertTemperature() {
 
     document.getElementById('result').innerHTML = resultText;
   }
+
+
+
+  // loop function
+
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
