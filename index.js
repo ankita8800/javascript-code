@@ -238,3 +238,26 @@ let firstName = "John";
 let lastName = "Doe";
 let fullName = firstName + " " + lastName;  // Using + operator
 let fullNameTemplate = `${firstName} ${lastName}`;  // Using template literals
+// gemini
+
+// Get references to the buttons and content area
+const portfolioBtn = document.getElementById('portfolioBtn');
+const marketBtn = document.getElementById('marketBtn');
+const content = document.getElementById('content');
+
+// Function to handle tab switching
+function switchTab(tabName) {
+  if (tabName === 'Portfolio') {
+    content.textContent = 'Welcome to your Portfolio! 📊';
+    portfolioBtn.classList.add('active');
+    marketBtn.classList.remove('active');
+  } else if (tabName === 'Market') {
+    content.textContent = 'Check out the Market data! 📈';
+    marketBtn.classList.add('active');
+    portfolioBtn.classList.remove('active');
+  }
+}
+
+// Add event listeners for button clicks
+portfolioBtn.addEventListener('click', () => switchTab('Portfolio'));
+marketBtn.addEventListener('click', () => switchTab('Market'));
