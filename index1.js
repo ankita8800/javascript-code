@@ -131,3 +131,26 @@ const display = document.getElementById('display');
         display.value = 'Error';
       }
     }
+
+
+
+    // modular error handling
+    class Person {
+      constructor(name, age) {
+          if (!name || !age) throw new Error("Name and age are required");
+          this.name = name;
+          this.age = age;
+      }
+  
+      greet() {
+          console.log(`Hello, ${this.name}! You are ${this.age} years old.`);
+      }
+  }
+  
+  try {
+      const user = new Person("Alice", 25);
+      user.greet();
+  } catch (error) {
+      console.error(error.message);
+  }
+  
