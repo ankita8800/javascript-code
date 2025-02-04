@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to bite</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensure the body takes up the full height of the viewport */
+        }
+
+        body {
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+            background-color: #f4f4f4; /* Optional background color */
+        }
+
+        .container-bite-box {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* Creates a 6-column grid */
+            gap: 15px; /* Adds space between the columns */
+            max-width: 1200px; /* Optional: Set a max-width for the container */
+            padding: 20px; /* Optional: Add some padding around the container */
+        }
+
+        .bite-box {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 29px;
+            background-color: #76a08a;
+            padding: 22px 10px;
+            text-align: center; 
+            position: relative;
+        }
+
+        .bite-box::after{
+            content: "";
+            position: absolute;
+            top: 163px;
+            left: 65px;
+            height: 52px;
+            width: 50px;    
+            /* clip-path: polygon(100% 0, 0 0, 43% 100%); */
+            background-image: url(img/clip.png);
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+                
+        .inner-bite-box{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: #fff;
+            padding: 17px -9PX;
+            border-radius: 26px;
+            height: 138px;
+        }
+
+        .inner-bite-box p {
+            font-size: 21PX;
+            color: #347879;
+            font-weight: 900;
+            text-align: center !important;
+            text-transform: uppercase;
+            padding: 17px;
+            padding-top: 36px;
+        }
+
+        /* horizontal line */
+        .main-bite {
+            display: flex;
+            gap: 153px;
+            border: 7px solid #063849;
+            border-radius: 10px;
+            height: 11px;
+            margin-top: 30px;
+
+        }
+
+        .bite-circle1, .bite-circle2, .bite-circle3, .bite-circle4, .bite-circle5, .bite-circle6 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #7fb294;
+            position: relative;
+            top: -20px;
+            left: 86px;
+        } 
+
+        @media (max-width: 767px){
+            .main-bite {
+            display: unset;
+            gap: 151px;
+            border: 10px solid #063849;
+            border-radius: 10px;
+            height: 11px;
+            margin-top: 42px;
+        }
+        .bite-box::after {
+            content: "";
+            background-color: #7caa90;
+            position: unset;
+            top: 178px;
+            left: 44px;
+            height: 50px;
+            width: 50px;
+            clip-path: polygon(100% 0, 0 0, 43% 100%);
+        }
+        .bite-box {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 27px;
+            background-color: #7fb294;
+            text-align: center;
+            padding: 4px;
+            margin: 10px;
+        }
+        .container-bite-box {
+            display: table-cell;
+            grid-template-columns: repeat(6, 1fr);
+            /* gap: 15px; */
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 10p;
+            gap: 10px;
+        }
+        .main-bite {
+           display: none;
+        }
+        .bite-circle1, .bite-circle2, .bite-circle3, .bite-circle4, .bite-circle5, .bite-circle6 {
+            display: none;
+        }
+        .inner-bite-box {
+            height: unset;
+        }
+        .inner-bite-box p {
+            font-size: 22PX;
+            padding-top: 0px;
+            padding: 10px;
+        }
+        }
+        
+        @media(max-width: 991px) and (min-width:768px) {
+            .main-bite {
+            display: unset;
+            gap: 151px;
+            border: 10px solid #063849;
+            border-radius: 10px;
+            height: 11px;
+            margin-top: 42px;
+        }
+        .bite-box::after {
+            content: "";
+            background-color: #7caa90;
+            position: unset;
+            top: 178px;
+            left: 44px;
+            height: 50px;
+            width: 50px;
+            clip-path: polygon(100% 0, 0 0, 43% 100%);
+        }
+        .bite-box {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 27px;
+            background-color: #7fb294;
+            text-align: center;
+            padding: 4px;
+            margin: 14px;
+        }
+        .container-bite-box {
+            display: table-cell;
+            grid-template-columns: repeat(6, 1fr);
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        .main-bite {
+           display: none;
+        }
+        .bite-circle1, .bite-circle2, .bite-circle3, .bite-circle4, .bite-circle5, .bite-circle6 {
+            display: none;
+        }
+        .inner-bite-box {
+            height: unset;
+        }
+        .inner-bite-box p {
+            font-size: 22PX;
+            padding-top: 16px;
+        } 
+        }
+       
+    </style>
+</head>
+<body>
+    <section class="how-to-bite">
+        <div class="container container-bite-box">
+            <div class="bite-box">
+                <div class="inner-bite-border">
+                <div class="inner-bite-box">
+                    <p>Upload the job</p>
+                </div>
+            </div>
+            </div>
+            <div class="bite-box">
+                <div class="inner-bite-box">
+                    <p>Populate The Q. Bank</p>
+                </div>
+            </div>
+            <div class="bite-box">
+                <div class="inner-bite-box">
+                    <p>Craft The Interview</p>
+                </div>
+            </div>
+            <div class="bite-box">
+                <div class="inner-bite-box">
+                    <p>Add The Candidates</p>
+                </div>
+            </div>
+            <div class="bite-box">
+                <div class="inner-bite-box">
+                    <p>Shoot The Interviews</p>
+                </div>
+            </div>
+            <div class="bite-box">
+                <div class="inner-bite-box">
+                    <p>Receive The Feedback</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="main-bite">
+                <div class="bite-circle1"></div>
+                <div class="bite-circle2"></div>
+                <div class="bite-circle3"></div>
+                <div class="bite-circle4"></div>
+                <div class="bite-circle5"></div>
+                <div class="bite-circle6"></div>
+            </div>
+        </div>
+        </div> 
+    </section>
+</body>
+</html>
