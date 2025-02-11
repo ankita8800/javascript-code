@@ -154,3 +154,27 @@ const display = document.getElementById('display');
       console.error(error.message);
   }
   
+
+
+  // todolist
+
+  function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const taskText = taskInput.value.trim();
+    
+    if (taskText === "") return;
+
+    const li = document.createElement("li");
+    li.textContent = taskText;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "X";
+    removeBtn.onclick = function () {
+        li.remove();
+    };
+
+    li.appendChild(removeBtn);
+    document.getElementById("todo-list").appendChild(li);
+
+    taskInput.value = "";
+}
